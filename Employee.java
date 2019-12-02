@@ -2,7 +2,7 @@ import java.util.*;
 abstract class Employee {
 public Employee(){}
 public abstract double salary();
-
+//ТУТ ТОЖЕ ЕСТЬ ПОЛИМОРФИЗМ
 }
 class Manager extends Employee//Наследует у базового
 {
