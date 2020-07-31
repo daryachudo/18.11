@@ -1,0 +1,65 @@
+public class lowArray{
+
+    public static void main(String[] args) {
+
+        Techical printable = new TV("Телевизор", "Бош");
+        printable.print();      //  Java. Complete Reference (H. Shildt)
+        printable = new Refrigerator("Холодос");
+        printable.print();      // Foreign Policy
+        printable=new Telefone("телефон","Ксиоми");
+        printable.print();
+    }
+}
+interface Techical{
+
+    void print();
+}
+class TV implements Techical{
+
+    String name;
+    String conpany;
+
+    TV(String name, String company){
+
+        this.name = name;
+        this.conpany = company;
+    }
+
+    public void print() {
+
+        System.out.printf("%s (%s) \n", name, conpany);
+    }
+}
+class Refrigerator implements Techical{
+
+    private String name;
+
+    String getName(){
+        return name;
+    }
+
+    Refrigerator(String name){
+
+        this.name = name;
+    }
+    public void print() {
+        System.out.println(name);
+    }
+}
+class Telefone implements Techical{
+
+    private String name;
+     private String company;
+    //String getName(){
+      //  return name;
+    //}
+
+    Telefone(String name,String company){
+
+        this.name = name;
+        this.company=company;
+    }
+    public void print() {
+        System.out.printf("%s (%s) \n", name, company);
+    }
+}
